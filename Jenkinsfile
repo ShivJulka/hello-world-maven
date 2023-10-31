@@ -19,7 +19,7 @@ pipeline {
         stage('Compile') {
             steps {
                 //get code from repo
-                sh "mvn clean cimpile"
+                sh "mvn clean compile"
                 
             }
         }

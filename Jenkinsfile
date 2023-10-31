@@ -16,14 +16,29 @@ pipeline {
             }
         }
         
-        stage('Compile') {
+           stage('Build') {
             steps {
-                //get code from repo
+                // Get some code from a GitHub repository
+                echo 'Now running build'
+            }
+        }
+        stage('Unit Tests') {
+            steps {
+                // Get some code from a GitHub repository
+                echo 'Now running tests'
+            }
+        }
+        stage('Package') {
+            steps {
+                // Get some code from a GitHub repository
                 sh "mvn clean compile"
-                
+            }
+        }
+        stage('Done') {
+            steps {
+                // Get some code from a GitHub repository
+                echo "Completed"
             }
         }
     }
-    
-    
 }
